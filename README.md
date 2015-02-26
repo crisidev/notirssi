@@ -1,5 +1,7 @@
 NotIRSSI
 ========
+Use libnotify / osx notification / growl / dbus over SSH to alert user
+of highlight.
 
 This code is a quick and dirty hack to get notifications over ssh from my server
 running irssi to my mac laptop. Aimed to be extended with other notification
@@ -15,7 +17,7 @@ The original idea came from
 for original notify.pl code :
  * http://lewk.org/log/code/irssi-notify
 
-Instakk
+Install
 =======
 Remote host running irssi
 -------------------------
