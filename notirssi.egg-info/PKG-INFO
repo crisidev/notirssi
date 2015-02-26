@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: notirssi
+Version: 1.0
+Summary: Use libnotify / osx notification / growl / dbus over SSH to alert user for hilighted messages
+Home-page: http://github.com/crisidev/notirssi
+Author: Matteo Bigoi
+Author-email: bigo at crisidev dot org
+License: WTFPL
+Description: 
+        
+        
+        
+        
+Keywords: ssh irc notifications growl libnotify irssi erc daemon
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Classifier: Environment :: MacOS X
+Classifier: Environment :: X11 Applications
+Classifier: Topic :: Text Editors :: Emacs

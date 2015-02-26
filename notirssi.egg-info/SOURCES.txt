@@ -1,0 +1,13 @@
+setup.py
+notirssi/__init__.py
+notirssi/daemon.py
+notirssi/data.py
+notirssi/notifier.py
+notirssi/notirssi.py
+notirssi.egg-info/PKG-INFO
+notirssi.egg-info/SOURCES.txt
+notirssi.egg-info/dependency_links.txt
+notirssi.egg-info/entry_points.txt
+notirssi.egg-info/not-zip-safe
+notirssi.egg-info/requires.txt
+notirssi.egg-info/top_level.txt
