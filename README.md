@@ -40,7 +40,7 @@ Local laptop running ssh client
 
 Options
 =======
-  usage: /usr/local/bin/notirssi [-h] [-f] [-S] [-V] [-H HOST] [-P PORT]
+  `usage: /usr/local/bin/notirssi [-h] [-f] [-S] [-V] [-H HOST] [-P PORT]
                                  [-G GROWL] [-N NOTIFY] [-T NOTIFIER] [-L LABEL]
                                  {start,stop} ...
 
@@ -67,8 +67,8 @@ Options
     -L LABEL, --label LABEL
                           Label for terminal-notifier
 
-  By Matteo Bigoi with patches from Bernard `Guyzmo` Pratz, Charles
-  `doublerebel` Philips, Rui Abreu Ferreira, Cooper Ry Lees, Kevin Mershon
+  By Matteo Bigoi with patches from Bernard Guyzmo Pratz, Charles
+  doublerebel Philips, Rui Abreu Ferreira, Cooper Ry Lees, Kevin Mershon`
 
 Configuration
 =============
