@@ -69,7 +69,7 @@ class NotIRSSINotifier(object):
         nick, message = message.split('|x|')
         nick = nick.strip()
         if self._args.verbose:
-            self._log._debug('with label:{}, nick:{}, message:{}'.format(self._args.label, nick, message))
+            self._log.debug('with label:{}, nick:{}, message:{}'.format(self._args.label, nick, message))
         nick = '{}: {}'.format(self._args.label, nick)
         return nick, message
 
