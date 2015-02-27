@@ -26,17 +26,14 @@ sub notify {
     my $separator = "|x|";
 
     my $remote = IO::Socket::INET->new(
-                        reuse    => 1,
-                        Proto    => "tcp",
-                        PeerAddr => Irssi::settings_get_str('notirssi_host'),
-                        PeerPort => Irssi::settings_get_int('notirssi_port'),
-                    )
-                  or do {
-			print("notirssi.pl: cannot connect to notification daemon: $!");
-			return;
-			};
-    # ... write notifications to the socket ... #
-	  print $remote $summary . $separator . $message . "\n";
+                    reuse    => 1,
+                    Proto    => "tcp",
+                    PeerAddr => Irssi::settings_get_str('notirssi_host'),
+                    PeerPort => Irssi::settings_get_int('notirssi_port'),
+    ) or do {
+      Irssi::print("Unable to send to " . Irssi::settings_get_str('notirssi_host') . ":" . Irssi::settings_get_int('notirssi_port') . " " . $!);
+    };
+	  print $remote $summary . $separator . $message . "\n" if defined $remote;
 }
 
 sub print_text_notify {
