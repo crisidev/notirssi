@@ -89,6 +89,15 @@ line to the following, making it transient :
 
     return [args.notify, '--hint', 'int:transient:1', '-i', 'dialog-information', '-t', '5000', ':'.join(args[1:]), args[0]]
 
+
+TODO
+====
+* check method is not working if the server is stopped
+* exceptions in NotIRSSINotifier are bizantine :)
+* move away from the ugly forking model to a threaded and sane one
+* make it a real daemon, aware of more than one client connected
+
+
 Licences
 ========
 
