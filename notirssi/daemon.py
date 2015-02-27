@@ -26,7 +26,6 @@ class NotIRSSIDaemon(object):
         self._log = self._setup_logging(level=self._args.log_level, console=self._args.foreground)
         self._redirect_to = os.devnull
         self.pid_file = os.path.join('/tmp', '{}.pid'.format(self.daemon_name))
-        self.notifier = NotIRSSINotifier(args, self.workdir)
         self._log.info('daemon: {}, workdir: {}'.format(self.daemon_name, self.workdir))
 
     def _write_tmp_file(self, file_name, content):
@@ -166,6 +165,7 @@ class NotIRSSIDaemon(object):
             conn.close()
 
     def start(self):
+        self.notifier = NotIRSSINotifier(args, self.workdir)
         self._log.info('starting daemon {}'.format(self.daemon_name))
         if self._check_if_daemon_exists():
             raise NotIRSSIDaemonError('daemon is already running... exiting.')

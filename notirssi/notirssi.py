@@ -76,6 +76,7 @@ def parse_args():
     parser.add_argument('-T', '--with-terminal-notifier',
                         dest='notifier',
                         action='store',
+                        default='/usr/local/bin/terminal-notifier',
                         help='Path to terminal-notifier executable')
     parser.add_argument('-L', '--label',
                         dest='label',
