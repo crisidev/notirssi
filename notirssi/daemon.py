@@ -165,7 +165,7 @@ class NotIRSSIDaemon(object):
             conn.close()
 
     def start(self):
-        self.notifier = NotIRSSINotifier(args, self.workdir)
+        self.notifier = NotIRSSINotifier(self._args, self.workdir)
         self._log.info('starting daemon {}'.format(self.daemon_name))
         if self._check_if_daemon_exists():
             raise NotIRSSIDaemonError('daemon is already running... exiting.')
