@@ -4,12 +4,11 @@ import base64
 import subprocess
 import logging
 from urlparse import urlparse
+from data import _PNG, _ICON
 
 Notify = None
 if sys.platform == 'linux2':
     from gi.repository import Notify
-
-from data import _PNG, _ICON
 
 
 class NotIRSSINotifierError(Exception):
@@ -68,6 +67,7 @@ class NotIRSSINotifier(object):
     def _parse_message(self, message):
         nick, message = message.split('|x|')
         nick = nick.strip()
+        message = message.lstrip('05')
         if self._args.verbose:
             self._log.debug('with label:{}, nick:{}, message:{}'.format(self._args.label, nick, message))
         nick = '{}: {}'.format(self._args.label, nick)
